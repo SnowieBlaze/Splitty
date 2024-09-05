@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.StartScreenCtrl">
+    <stylesheets>
+        <URL value="@/client/styles.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="newEventText" layoutX="124.0" layoutY="80.0" onKeyPressed="#keyPressed" prefHeight="25.0" prefWidth="235.0" />
+      <TextField fx:id="joinEventText" layoutX="124.0" layoutY="175.0" onKeyPressed="#keyPressed" prefHeight="25.0" prefWidth="235.0" />
+      <Text fx:id="newEventStaticText" layoutX="124.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create new event">
+         <font>
+            <Font size="20.0" />
+         </font></Text>
+       <Button fx:id="settingsButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onSettingsClick" text="Settings" />
+      <Text fx:id="joinEventStaticText" layoutX="124.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Join event">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="createEventButton" layoutX="381.0" layoutY="80.0" mnemonicParsing="false" onAction="#createEvent" text="Create" />
+      <Button fx:id="joinEventButton" layoutX="381.0" layoutY="175.0" mnemonicParsing="false" onAction="#joinEvent" text="Join" />
+      <Text fx:id="recentEventsText" layoutX="122.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recently viewed events:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <ListView fx:id="recentlyViewedEventsListView" layoutX="122.0" layoutY="256.0" prefHeight="130.0" prefWidth="310.0" />
+       <MenuButton fx:id="languageButton" layoutX="482.0" layoutY="345.0" mnemonicParsing="false" styleClass="language-menu-button">
+           <graphic>
+               <ImageView fx:id="languageButtonImageView" style="-fx-border-width: 0;" />
+           </graphic>
+       </MenuButton>
+   </children>
+</AnchorPane>

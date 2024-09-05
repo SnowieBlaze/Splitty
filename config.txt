@@ -1,0 +1,7 @@
+serverUrl: null
+email: null
+iban: null
+bic: null
+language: en
+currency: null
+name: null
